@@ -1,0 +1,718 @@
+/* Year Semester Selection Styles - Matching Digital Library Theme */
+
+.year-semester-container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: 
+    radial-gradient(ellipse at top, #8b6914 0%, #6b4e00 30%, #4a3200 60%, #2d1f00 100%),
+    linear-gradient(135deg, #d4af37 0%, #b8860b 25%, #8b6914 50%, #654321 75%, #3d2914 100%);
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+/* Vintage library atmosphere particles */
+.bg-particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.particle {
+  position: absolute;
+  opacity: 0.15;
+  animation: floatParticle 10s ease-in-out infinite;
+  border-radius: 50%;
+}
+
+.particle-1 {
+  top: 15%;
+  left: 5%;
+  width: 25px;
+  height: 25px;
+  background: radial-gradient(circle, #daa520, #b8860b);
+  animation-delay: 0s;
+}
+
+.particle-2 {
+  top: 25%;
+  right: 10%;
+  width: 18px;
+  height: 18px;
+  background: radial-gradient(circle, #cd853f, #a0522d);
+  animation-delay: 3s;
+}
+
+.particle-3 {
+  bottom: 30%;
+  left: 8%;
+  width: 30px;
+  height: 30px;
+  background: radial-gradient(circle, #b8860b, #8b6914);
+  animation-delay: 6s;
+}
+
+.particle-4 {
+  top: 60%;
+  right: 20%;
+  width: 22px;
+  height: 22px;
+  background: radial-gradient(circle, #deb887, #d2691e);
+  animation-delay: 1.5s;
+}
+
+@keyframes floatParticle {
+  0%, 100% { transform: translateY(0px) translateX(0px); opacity: 0.1; }
+  50% { transform: translateY(-40px) translateX(30px); opacity: 0.25; }
+}
+
+.hero-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  position: relative;
+}
+
+/* Main book container */
+.book-wrapper {
+  max-width: 1200px;
+  width: 100%;
+  height: 600px;
+  position: relative;
+  perspective: 1200px;
+  animation: bookEntrance 1.5s ease-out;
+}
+
+@keyframes bookEntrance {
+  from {
+    opacity: 0;
+    transform: translateY(50px) rotateX(-10deg);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) rotateX(0deg);
+  }
+}
+
+.open-book {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: gentleFloat 8s ease-in-out infinite;
+}
+
+@keyframes gentleFloat {
+  0%, 100% { transform: rotateY(2deg) translateY(0px); }
+  50% { transform: rotateY(-2deg) translateY(-12px); }
+}
+
+.book-spine {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 25px;
+  height: 100%;
+  background: 
+    linear-gradient(to bottom, 
+      #8b4513 0%, 
+      #654321 20%, 
+      #3d2914 40%, 
+      #2d1f00 60%, 
+      #654321 80%, 
+      #8b4513 100%
+    );
+  transform: translateX(-50%) rotateY(0deg);
+  border-radius: 3px;
+  box-shadow: 
+    0 0 30px rgba(139, 69, 19, 0.4),
+    inset 0 0 10px rgba(0, 0, 0, 0.3);
+  border: 2px solid #5d4037;
+}
+
+.book-page {
+  position: absolute;
+  width: 48%;
+  height: 100%;
+  background: 
+    linear-gradient(135deg, 
+      #faf0e6 0%, 
+      #f5deb3 20%, 
+      #deb887 40%, 
+      #f5deb3 60%, 
+      #faf0e6 100%
+    );
+  border-radius: 15px;
+  box-shadow: 
+    0 25px 50px rgba(139, 69, 19, 0.3),
+    inset 0 0 20px rgba(218, 165, 32, 0.1);
+  transform-origin: center center;
+  overflow: hidden;
+  border: 3px solid #d2691e;
+}
+
+.book-page::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    linear-gradient(90deg, transparent 0%, rgba(139, 69, 19, 0.08) 50%, transparent 100%),
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 28px,
+      rgba(184, 134, 11, 0.15) 29px,
+      rgba(184, 134, 11, 0.15) 30px
+    );
+  pointer-events: none;
+}
+
+.book-page::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 70% 30%, rgba(218, 165, 32, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 30% 70%, rgba(205, 133, 63, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.left-page {
+  left: 2%;
+  transform: rotateY(-5deg);
+  animation: pageFlutterLeft 5s ease-in-out infinite;
+}
+
+.right-page {
+  right: 2%;
+  transform: rotateY(5deg);
+  animation: pageFlutterRight 5s ease-in-out infinite;
+}
+
+@keyframes pageFlutterLeft {
+  0%, 100% { transform: rotateY(-5deg); }
+  50% { transform: rotateY(-8deg); }
+}
+
+@keyframes pageFlutterRight {
+  0%, 100% { transform: rotateY(5deg); }
+  50% { transform: rotateY(8deg); }
+}
+
+/* Left page content - Year Selection */
+.left-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 3rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  z-index: 2;
+}
+
+.page-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  animation: iconPulse 3s ease-in-out infinite;
+  filter: drop-shadow(2px 2px 4px rgba(139, 69, 19, 0.3));
+}
+
+@keyframes iconPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+}
+
+.left-content h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #8b4513, #654321, #3d2914);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  animation: slideInFromLeft 1s ease-out 0.5s both;
+  text-shadow: 2px 2px 4px rgba(139, 69, 19, 0.2);
+}
+
+.left-content p {
+  font-size: 1.1rem;
+  background: linear-gradient(135deg, #8b4513, #a0522d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  animation: slideInFromLeft 1s ease-out 0.7s both;
+  font-weight: 500;
+}
+
+.year-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  animation: slideInFromLeft 1s ease-out 0.9s both;
+}
+
+.year-btn {
+  background: linear-gradient(135deg, #b8860b, #daa520, #cd853f);
+  color: #2d1f00;
+  padding: 1rem 1.5rem;
+  border: none;
+  border-radius: 15px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  box-shadow: 
+    0 8px 25px rgba(184, 134, 11, 0.3),
+    inset 0 2px 8px rgba(255, 255, 255, 0.2);
+  position: relative;
+  overflow: hidden;
+  border: 2px solid #8b6914;
+  text-shadow: 1px 1px 2px rgba(139, 69, 19, 0.3);
+}
+
+.year-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.6s;
+}
+
+.year-btn:hover::before {
+  left: 100%;
+}
+
+.year-btn:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 
+    0 12px 35px rgba(184, 134, 11, 0.4),
+    inset 0 2px 12px rgba(255, 255, 255, 0.3);
+  background: linear-gradient(135deg, #daa520, #ffd700, #deb887);
+}
+
+.year-btn.active {
+  background: linear-gradient(135deg, #ffd700, #ffed4e, #daa520);
+  transform: translateY(-2px);
+  box-shadow: 
+    0 15px 40px rgba(255, 215, 0, 0.5),
+    inset 0 3px 15px rgba(255, 255, 255, 0.4);
+}
+
+.year-icon {
+  font-size: 1.3em;
+}
+
+/* Right page content - Semester Selection */
+.right-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+/* Placeholder content when no year selected */
+.placeholder-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.floating-elements {
+  position: relative;
+  width: 100%;
+  height: 60%;
+}
+
+.floating-item {
+  position: absolute;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: #faf0e6;
+  box-shadow: 
+    0 12px 30px rgba(139, 69, 19, 0.3),
+    inset 0 2px 10px rgba(255, 255, 255, 0.1);
+  animation: floatItem 5s ease-in-out infinite;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  border: 2px solid rgba(218, 165, 32, 0.3);
+  text-shadow: 2px 2px 4px rgba(139, 69, 19, 0.5);
+}
+
+.floating-item:hover {
+  transform: scale(1.15) !important;
+  box-shadow: 
+    0 20px 40px rgba(139, 69, 19, 0.4),
+    inset 0 2px 15px rgba(255, 255, 255, 0.2);
+}
+
+.item-1 {
+  top: 10%;
+  left: 15%;
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, #8b4513, #654321, #5d4037);
+  animation-delay: 0s;
+}
+
+.item-2 {
+  top: 5%;
+  right: 20%;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #b8860b, #daa520, #cd853f);
+  animation-delay: 1s;
+}
+
+.item-3 {
+  bottom: 40%;
+  left: 10%;
+  width: 80px;
+  height: 55px;
+  background: linear-gradient(135deg, #d2691e, #daa520, #b8860b);
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  animation-delay: 2s;
+}
+
+.item-4 {
+  bottom: 25%;
+  right: 15%;
+  width: 65px;
+  height: 65px;
+  background: linear-gradient(135deg, #a0522d, #8b4513, #654321);
+  animation-delay: 0.5s;
+}
+
+.item-5 {
+  top: 40%;
+  left: 45%;
+  width: 75px;
+  height: 75px;
+  background: linear-gradient(135deg, #cd853f, #deb887, #d2691e);
+  transform: translateX(-50%);
+  animation-delay: 1.5s;
+}
+
+@keyframes floatItem {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  25% { transform: translateY(-15px) rotate(2deg); }
+  75% { transform: translateY(-8px) rotate(-2deg); }
+}
+
+.selection-prompt {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  animation: promptPulse 2s ease-in-out infinite;
+}
+
+.prompt-icon {
+  font-size: 2rem;
+  animation: pointLeft 1.5s ease-in-out infinite;
+}
+
+@keyframes pointLeft {
+  0%, 100% { transform: translateX(0px); }
+  50% { transform: translateX(-8px); }
+}
+
+.selection-prompt p {
+  font-size: 1.2rem;
+  background: linear-gradient(135deg, #8b4513, #a0522d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 600;
+}
+
+@keyframes promptPulse {
+  0%, 100% { opacity: 0.7; }
+  50% { opacity: 1; }
+}
+
+/* Semester content when year is selected */
+.semester-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 1rem;
+}
+
+.semester-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  animation: slideInFromRight 1s ease-out both;
+}
+
+.semester-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  display: block;
+  animation: iconPulse 3s ease-in-out infinite;
+  filter: drop-shadow(2px 2px 4px rgba(139, 69, 19, 0.3));
+}
+
+.semester-header h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #8b4513, #654321, #3d2914);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+  text-shadow: 2px 2px 4px rgba(139, 69, 19, 0.2);
+}
+
+.semester-header p {
+  font-size: 1rem;
+  background: linear-gradient(135deg, #8b4513, #a0522d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 500;
+}
+
+.semester-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  max-width: 300px;
+}
+
+.semester-btn {
+  background: linear-gradient(135deg, #b8860b, #daa520, #cd853f);
+  color: #2d1f00;
+  padding: 1rem 1.5rem;
+  border: none;
+  border-radius: 15px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  box-shadow: 
+    0 8px 25px rgba(184, 134, 11, 0.3),
+    inset 0 2px 8px rgba(255, 255, 255, 0.2);
+  position: relative;
+  overflow: hidden;
+  border: 2px solid #8b6914;
+  text-shadow: 1px 1px 2px rgba(139, 69, 19, 0.3);
+  animation: slideInFromRight 1s ease-out both;
+}
+
+.semester-btn:nth-child(1) { animation-delay: 0.2s; }
+.semester-btn:nth-child(2) { animation-delay: 0.4s; }
+.semester-btn:nth-child(3) { animation-delay: 0.6s; }
+.semester-btn:nth-child(4) { animation-delay: 0.8s; }
+
+.semester-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.6s;
+}
+
+.semester-btn:hover::before {
+  left: 100%;
+}
+
+.semester-btn:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 
+    0 12px 35px rgba(184, 134, 11, 0.4),
+    inset 0 2px 12px rgba(255, 255, 255, 0.3);
+  background: linear-gradient(135deg, #daa520, #ffd700, #deb887);
+}
+
+.semester-btn:hover .semester-arrow {
+  transform: translateX(8px);
+}
+
+.semester-icon {
+  font-size: 1.2em;
+}
+
+.semester-text {
+  flex: 1;
+  text-align: center;
+}
+
+.semester-arrow {
+  font-size: 1.3em;
+  transition: transform 0.3s ease;
+}
+
+/* Golden ripple effect */
+.golden-ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 215, 0, 0.6), rgba(218, 165, 50, 0.3), transparent);
+  transform: scale(0);
+  animation: goldenRipple 0.8s ease-out;
+  left: 50%;
+  top: 50%;
+  width: 30px;
+  height: 30px;
+  margin-left: -15px;
+  margin-top: -15px;
+  pointer-events: none;
+}
+
+@keyframes goldenRipple {
+  to {
+    transform: scale(6);
+    opacity: 0;
+  }
+}
+
+/* Golden sparkle effects */
+.sparkles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.sparkle {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: radial-gradient(circle, #ffd700, #daa520, transparent);
+  border-radius: 50%;
+  animation: sparkleAnim 4s ease-in-out infinite;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+.sparkle-1 { top: 20%; left: 15%; animation-delay: 0s; }
+.sparkle-2 { top: 60%; right: 20%; animation-delay: 1.5s; }
+.sparkle-3 { bottom: 30%; left: 25%; animation-delay: 3s; }
+.sparkle-4 { top: 35%; right: 35%; animation-delay: 0.7s; }
+.sparkle-5 { bottom: 15%; right: 45%; animation-delay: 2.2s; }
+
+@keyframes sparkleAnim {
+  0%, 100% { opacity: 0; transform: scale(0) rotate(0deg); }
+  50% { opacity: 1; transform: scale(1) rotate(180deg); }
+}
+
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .book-wrapper {
+    height: 500px;
+  }
+
+  .left-content {
+    padding: 2rem 1.5rem;
+  }
+
+  .left-content h1 {
+    font-size: 2rem;
+  }
+
+  .left-content p {
+    font-size: 1rem;
+  }
+
+  .year-btn {
+    padding: 0.8rem 1.2rem;
+    font-size: 1rem;
+  }
+
+  .semester-header h2 {
+    font-size: 1.6rem;
+  }
+
+  .semester-btn {
+    padding: 0.8rem 1.2rem;
+    font-size: 1rem;
+  }
+
+  .floating-item {
+    font-size: 1.2rem;
+  }
+
+  .item-1, .item-2, .item-4, .item-5 {
+    width: 50px;
+    height: 50px;
+  }
+
+  .item-3 {
+    width: 60px;
+    height: 45px;
+    font-size: 0.9rem;
+  }
+}

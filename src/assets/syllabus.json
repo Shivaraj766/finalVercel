@@ -1,0 +1,361 @@
+{"cse": {
+    "1": {
+      "1": [  
+        { "name": "Mathematics-I(LAC)",
+        "unitPdfs":
+        ["/1-1/lac_1st_unit.pdf",
+        "/1-1/lac_2nd_unit.pdf",
+        "/1-1lac_3rd_unit.pdf",
+        "/1-1/lac_4th_unit.pdf",
+        "/1-1/lac_5th_unit.pdf"
+        ] },
+        { "name": "Basic Electrical Engineering(BEE)",
+        "unitPdfs":
+        ["/1-1/BEE_unit_1.pdf","/1-1/BEE_unit_2.pdf","/1-1/BEE_unit_3.pdf","/1-1/BEE_unit_4.pdf","/1-1/BEE_unit_5.pdf","BEE_unit_6.pdf"] 
+       },
+        { "name": "Chemistry",
+      "unitPdfs":
+        ["/1-1/chem_1st_unit.pdf",
+        "/1-1/chem_2nd_unit.pdf",
+        "/1-1/chem_3rd_unit.pdf",
+        "/1-1/chem_4th_unit.pdf",
+        "/1-1/chem_5th_unit.pdf"
+        ]   
+      },
+        { "name": "CPDS",
+        "unitPdfs":
+        ["/1-1/cpds_unit_1.pdf",
+        " /1-1/cpds_unit_2.pdf",
+        " /1-1/cpds_unit_3.pdf",
+        " /1-1/cpds_unit_4.pdf",
+        " /1-1/cpds_unit_5.pdf"]}
+      ],
+      "2": [
+        { "name": "English(CE)", "unitPdfs":["/1-2/CE1.pdf","/1-2/CE2.pdf","/1-2/CE3.pdf","/1-2/CE4.pdf","/1-2/CE5.pdf"]  },
+        { "name": "Mathematics-II(P&S)", "unitPdfs":["/1-2/PS_1.pdf","/1-2/PS_2.pdf","/1-2/PS_3.pdf","/1-2/PS_4.pdf","/1-2/PS_5.pdf"] },
+        { "name": "Applied Physics (AP)", "unitPdfs":["/1-2/ap1.pdf","/1-2/ap2.pdf","/1-2/ap3.pdf","/1-2/ap4.pdf","/1-2/ap5.pdf"]},
+        { "name": "Engineering Drawing", "unitPdfs":["/1-2/ED1.pdf","/1-2/ED2.pdf","/1-2/ED3.pdf","/1-2/ED4.pdf","/1-2/ED5.pdf"]},
+        { "name": "Programming for Problem Solving Lab(Python)","unitPdfs":["/1-2/PPDS1.pdf","/1-2/PPDS2.pdf","/1-2/PPDS3.pdf","/1-2/PPDS4.pdf","/1-2/PPDS5.pdf"] }
+      ]
+    },
+    "2": {
+      "3": [
+        { "name": "Advance Data Structures (ADSA)", "unitPdfs":
+        ["/2-3/ADSA1.pdf",
+        "/2-3/ADSA2.pdf",
+        "/2-3/ADSA3.pdf",
+        "/2-3/ADSA4.pdf",
+        "/2-3/ADSA5.pdf"
+        ] },
+        { "name": "Discrete Mathematics(DMGT)" , "unitPdfs":["/2-3/DMGT1.pdf","/2-3/DMGT2.pdf","/2-3/DMGT3.pdf","/2-3/DMGT4.pdf","/2-3/DMGT5.pdf"] },
+        { "name": "Digital Logic Design(DEMP)" ,"unitPdfs":["/2-3/DEMP1.pdf","/2-3/DEMP2.pdf","/2-3/DEMP3.pdf","/2-3/DEMP4.pdf","/2-3/DEMP5.pdf"]},
+        
+        { "name": "Computer Organization" , "unitPdfs":["/2-3/CO1.pdf","/2-3/CO2.pdf","/2-3/CO3.pdf","/2-3/CO4.pdf","/2-3/CO5.pdf"]},
+        { "name": "Object Oriented Programming (JAVA)","unitPdfs":["/2-3/OOPJ1.pdf","/2-3/OOPJ2.pdf","/2-3/OOPJ3.pdf","/2-3/OOPJ4.pdf","/2-3/OOPJ5.pdf"] }
+      ],
+      "4": [
+        { "name": "Database Management Systems(DBMS)", "unitPdfs":["/2-4/DBMS1.pdf","/2-4/DBMS2.pdf","/2-4/DBMS3.pdf","/2-4/DBMS4.pdf","/2-4/DBMS5.pdf"] },
+        { "name": "Operating Systems(OS)","unitPdfs":["/2-4/OS1.pdf","/2-4/OS2.pdf","/2-4/OS3.docx","/2-4/OS4.docx","/2-4/OS5.pdf"] },
+        { "name": "Software Engineering","unitPdfs":["/2-4/SE1.pdf","/2-4/SE2.pdf","/2-4/SE3.pdf","/2-4/SE4.pdf","/2-4/SE5.pdf"] },
+        { "name": "Maths (DSSM)", "unitPdfs":["/2-4/DSSM1.pdf","/2-4/DSSM2.pdf","/2-4/DSSM3.pdf","/2-4/DSSM4.pdf","/2-4/DSSM5.pdf"] }
+      ]
+    },
+    "3": {
+      "5": [
+        { "name": "Computer Network (CN)","unitPdfs":["/3-5/CN1.pdf","/3-5/CN2.pdf","/3-5/CN3.pdf","/3-5/CN4.pdf","/3-5/CN15.pdf"] },
+        { "name": "FLAT" ,"unitPdfs":["/3-5/FLAT1.pdf","/3-5/FLAT2.pdf","/3-5/FLAT3.pdf","/3-5/FLAT4.pdf","/3-5/FLAT5.pdf"] },
+        { "name": "Artificial Intelligence","unitPdfs":["/3-5/AI1.pdf","/3-5/AI2.pdf","/3-5/AI3.pdf","/3-5/AI4.pdf","/3-5/AI5.pdf"] },
+        { "name": "Building Technology", "unitPdfs":["/3-5/BDT1.pdf","/3-5/BDT2.pdf","/3-5/BDT3.pdf","/3-5/BDT4.pdf","/3-5/BDT5.pdf"] },
+        { "name": "SPM", "unitPdfs":["/3-5/SPM1.pdf","/3-5/SPM2.pdf","/3-5/SPM3.pdf","/3-5/SPM4.pdf","/3-5/SPM5.pdf"] }
+      ],
+      "6": [
+        { "name": "Compiler Design", "unitPdfs":["/3-6/CD1.pdf","/3-6/CD2.pdf","/3-6/CD3.pdf","/3-6/CD4.pdf","/3-6/CD5.pdf"] },
+        { "name": "Machine Learning", "unitPdfs":["/3-6/ML1.pdf","/3-6/ML2.pptx","/3-6/ML3.pptx","/3-6/ML4.pptx","/3-6/ML5.pptx"] },        
+        { "name": "Internet of Things (IOT)", "unitPdfs":["/3-6/IOT1.pdf","/3-6/IOT2.pdf","/3-6/IOT3.pdf","/3-6/IOT4.pdf","/3-6/IOT5.pdf"] },
+        { "name": "Software Testing", "unitPdfs":["/3-6/ST1.pdf","/3-6/ST2.pdf","/3-6/ST3.pdf","/3-6/ST4.pdf","/3-6/ST5.pdf"] },
+        { "name": "Elective-I" }
+      ]
+    },
+    "4": {
+      "7": [
+        { "name": "Machine Learning" },
+        { "name": "Big Data Analytics" },
+        { "name": "Internet of Things" },
+        { "name": "Elective-II" },
+        { "name": "Elective-III" }
+      ],
+      "8": [
+        { "name": "Project Work" },
+        { "name": "Internship" },
+        { "name": "Elective-IV" }
+      ]
+    }
+  },
+  
+  "ece": {
+    "1": {
+      "1": [
+        { "name": "Mathematics-I" },
+        { "name": "Physics" },
+        { "name": "Basic Electrical Engineering" },
+        { "name": "Basic Electronics Engineering" },
+        { "name": "Engineering Chemistry" }
+      ],
+      "2": [
+        { "name": "Mathematics-II" },
+        { "name": "Engineering Mechanics" },
+        { "name": "Basic Civil Engineering" },
+        { "name": "Programming for Problem Solving" },
+        { "name": "Environmental Science" }
+      ]
+    },
+    "2": {
+      "3": [
+        { "name": "Analog Circuits" },
+        { "name": "Digital Logic Design" },
+        { "name": "Electronic Measurements and Instrumentation" },
+        { "name": "Signals and Systems" },
+        { "name": "Electromagnetic Theory" }
+      ],
+      "4": [
+        { "name": "Microprocessors and Microcontrollers" },
+        { "name": "Communication Systems" },
+        { "name": "Control Systems" },
+        { "name": "Pulse and Digital Circuits" },
+        { "name": "Electrical Machines" }
+      ]
+    },
+    "3": {
+      "5": [
+        { "name": "VLSI Design" },
+        { "name": "Digital Signal Processing" },
+        { "name": "Embedded Systems" },
+        { "name": "Data Communication and Networking" },
+        { "name": "Operating Systems" }
+      ],
+      "6": [
+        { "name": "Digital Communication" },
+        { "name": "Microwave Engineering" },
+        { "name": "Optical Communication" },
+        { "name": "Computer Networks" },
+        { "name": "Control Systems" }
+      ]
+    },
+    "4": {
+      "7": [
+        { "name": "Antenna and Wave Propagation" },
+        { "name": "VLSI Signal Processing" },
+        { "name": "Wireless Communication" },
+        { "name": "Embedded System Design" },
+        { "name": "Elective-I" }
+      ],
+      "8": [
+        { "name": "Optical Networks" },
+        { "name": "Internet of Things" },
+        { "name": "Machine Learning" },
+        { "name": "Elective-II" },
+        { "name": "Project Work" }
+      ]
+    }
+  },
+  "eee": {
+    "1": {
+      "1": [
+        { "name": "Mathematics-I" },
+        { "name": "Physics" },
+        { "name": "Basic Electrical Engineering" },
+        { "name": "Basic Electronics Engineering" },
+        { "name": "Engineering Chemistry" }
+      ],
+      "2": [
+        { "name": "Mathematics-II" },
+        { "name": "Engineering Mechanics" },
+        { "name": "Basic Civil Engineering" },
+        { "name": "Programming for Problem Solving" },
+        { "name": "Environmental Science" }
+      ]
+    },
+    "2": {
+      "3": [
+        { "name": "Electrical Machines" },
+        { "name": "Network Analysis and Synthesis" },
+        { "name": "Measurements and Instrumentation" },
+        { "name": "Analog Circuits" },
+        { "name": "Electromagnetic Theory" }
+      ],
+      "4": [
+        { "name": "Power Systems-I" },
+        { "name": "Control Systems" },
+        { "name": "Electrical and Electronic Measurements" },
+        { "name": "Digital Electronics" },
+        { "name": "Microprocessors and Microcontrollers" }
+      ]
+    },
+    "3": {
+      "5": [
+        { "name": "Power Electronics" },
+        { "name": "Power Systems-II" },
+        { "name": "Electrical Machines-II" },
+        { "name": "Electrical Drives" },
+        { "name": "Utilization of Electrical Energy" }
+      ],
+      "6": [
+        { "name": "Electrical Power Generation, Transmission and Distribution" },
+        { "name": "Switchgear and Protection" },
+        { "name": "Embedded Systems" },
+        { "name": "Microcontrollers and Applications" },
+        { "name": "Power System Operation and Control" }
+      ]
+    },
+    "4": {
+      "7": [
+        { "name": "High Voltage Engineering" },
+        { "name": "Renewable Energy Systems" },
+        { "name": "Electrical System Design" },
+        { "name": "Flexible AC Transmission Systems (FACTS)" },
+        { "name": "Elective-I" }
+      ],
+      "8": [
+        { "name": "Smart Grid Technology" },
+        { "name": "Electrical Vehicle Technology" },
+        { "name": "Power Quality" },
+        { "name": "Elective-II" },
+        { "name": "Project Work" }
+      ]
+    }
+  },
+  
+  "mech": {
+    "1": {
+      "1": [
+        { "name": "Mathematics-I" },
+        { "name": "Physics" },
+        { "name": "Basic Electrical Engineering" },
+        { "name": "Engineering Chemistry" },
+        { "name": "Basic Mechanical Engineering" }
+      ],
+      "2": [
+        { "name": "Mathematics-II" },
+        { "name": "Engineering Mechanics" },
+        { "name": "Basic Civil Engineering" },
+        { "name": "Programming for Problem Solving" },
+        { "name": "Environmental Science" }
+      ]
+    },
+    "2": {
+      "3": [
+        { "name": "Engineering Thermodynamics" },
+        { "name": "Mechanics of Solids" },
+        { "name": "Manufacturing Technology - I" },
+        { "name": "Fluid Mechanics and Hydraulic Machines" },
+        { "name": "Electrical and Electronics Engineering" }
+      ],
+      "4": [
+        { "name": "Kinematics of Machinery" },
+        { "name": "Thermal Engineering - I" },
+        { "name": "Manufacturing Technology - II" },
+        { "name": "Strength of Materials" },
+        { "name": "Metallurgy and Material Science" }
+      ]
+    },
+    "3": {
+      "5": [
+        { "name": "Heat Transfer" },
+        { "name": "Machine Design" },
+        { "name": "Manufacturing Science" },
+        { "name": "Dynamics of Machinery" },
+        { "name": "Mechatronics" }
+      ],
+      "6": [
+        { "name": "Refrigeration and Air Conditioning" },
+        { "name": "Design of Machine Elements" },
+        { "name": "Hydraulic Machines" },
+        { "name": "Automobile Engineering" },
+        { "name": "Operations Research" }
+      ]
+    },
+    "4": {
+      "7": [
+        { "name": "Power Plant Engineering" },
+        { "name": "Industrial Engineering and Management" },
+        { "name": "CAD/CAM" },
+        { "name": "Elective-I" },
+        { "name": "Project Work" }
+      ],
+      "8": [
+        { "name": "Maintenance Engineering" },
+        { "name": "Mechatronics and Automation" },
+        { "name": "Elective-II" },
+        { "name": "Seminar" },
+        { "name": "Project Work" }
+      ]
+    }
+  },
+  "civil": {
+    "1": {
+      "1": [
+        { "name": "Mathematics-I" },
+        { "name": "Physics" },
+        { "name": "Basic Electrical Engineering" },
+        { "name": "Engineering Chemistry" },
+        { "name": "Basic Civil Engineering" }
+      ],
+      "2": [
+        { "name": "Mathematics-II" },
+        { "name": "Engineering Mechanics" },
+        { "name": "Basic Mechanical Engineering" },
+        { "name": "Programming for Problem Solving" },
+        { "name": "Environmental Science" }
+      ]
+    },
+    "2": {
+      "3": [
+        { "name": "Strength of Materials" },
+        { "name": "Fluid Mechanics" },
+        { "name": "Surveying" },
+        { "name": "Building Materials" },
+        { "name": "Engineering Geology" }
+      ],
+      "4": [
+        { "name": "Structural Analysis - I" },
+        { "name": "Concrete Technology" },
+        { "name": "Geotechnical Engineering - I" },
+        { "name": "Transportation Engineering - I" },
+        { "name": "Environmental Engineering - I" }
+      ]
+    },
+    "3": {
+      "5": [
+        { "name": "Structural Analysis - II" },
+        { "name": "Design of Concrete Structures" },
+        { "name": "Geotechnical Engineering - II" },
+        { "name": "Transportation Engineering - II" },
+        { "name": "Hydrology and Water Resources Engineering" }
+      ],
+      "6": [
+        { "name": "Design of Steel Structures" },
+        { "name": "Environmental Engineering - II" },
+        { "name": "Water Supply Engineering" },
+        { "name": "Foundation Engineering" },
+        { "name": "Elective-I" }
+      ]
+    },
+    "4": {
+      "7": [
+        { "name": "Earthquake Resistant Design" },
+        { "name": "Advanced Structural Design" },
+        { "name": "Construction Management and Planning" },
+        { "name": "Elective-II" },
+        { "name": "Project Work" }
+      ],
+      "8": [
+        { "name": "Structural Health Monitoring" },
+        { "name": "Sustainable Construction" },
+        { "name": "Elective-III" },
+        { "name": "Seminar" },
+        { "name": "Project Work" }
+      ]
+    }
+  }
+}
+
