@@ -3,7 +3,7 @@ import DigitalLibraryHome from './components/DigitalLibraryHome/home.jsx';
 import Branch from './components/Branch/branch.jsx';
 import YearSemesterSelection from './components/YearSelection/index.jsx';
 import Subject from './components/Subject/index.jsx';
-
+import { Analytics } from "@vercel/analytics/react"
 
 function App() {
   return (
@@ -15,7 +15,9 @@ function App() {
 
       {/* Catch-all 404 route */}
       <Route path="*" element={<h1>404 not found</h1>} />
+      <Analytics />
     </Routes>
+  
   );
 }
 
