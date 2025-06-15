@@ -861,3 +861,202 @@
     min-height: 100px;
   }
 }
+
+/* ═══════════════════════════════════════════════════════════════════
+   SEMESTER SYLLABUS SECTION (in sidebar)
+   ═══════════════════════════════════════════════════════════════════ */
+
+.sup-semester-syllabus-section {
+  padding: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 1rem;
+}
+
+.sup-semester-syllabus-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  border-radius: 12px;
+  padding: 1rem;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.sup-semester-syllabus-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.6s;
+}
+
+.sup-semester-syllabus-btn:hover::before {
+  left: 100%;
+}
+
+.sup-semester-syllabus-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(102, 126, 234, 0.4);
+}
+
+.sup-syllabus-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.sup-syllabus-text {
+  flex: 1;
+  text-align: left;
+}
+
+.sup-syllabus-title {
+  display: block;
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 0.25rem;
+}
+
+.sup-syllabus-subtitle {
+  display: block;
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+.sup-syllabus-arrow {
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.sup-semester-syllabus-btn:hover .sup-syllabus-arrow {
+  transform: translateX(4px);
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   SUBJECT SYLLABUS BUTTON (in main content header)
+   ═══════════════════════════════════════════════════════════════════ */
+
+.sup-subject-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.sup-subject-syllabus-btn {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 1rem;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 3px 12px rgba(245, 87, 108, 0.3);
+  flex-shrink: 0;
+}
+
+.sup-subject-syllabus-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.sup-subject-syllabus-btn:hover::before {
+  left: 100%;
+}
+
+.sup-subject-syllabus-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 20px rgba(245, 87, 108, 0.4);
+}
+
+.sup-subject-syllabus-icon {
+  font-size: 1.1rem;
+}
+
+.sup-subject-syllabus-text {
+  font-weight: 600;
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   RESPONSIVE ADJUSTMENTS
+   ═══════════════════════════════════════════════════════════════════ */
+
+@media (max-width: 768px) {
+  .sup-subject-title-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  
+  .sup-subject-syllabus-btn {
+    align-self: flex-end;
+    font-size: 0.85rem;
+    padding: 0.5rem 0.8rem;
+  }
+  
+  .sup-semester-syllabus-btn {
+    padding: 0.8rem;
+  }
+  
+  .sup-syllabus-title {
+    font-size: 0.9rem;
+  }
+  
+  .sup-syllabus-subtitle {
+    font-size: 0.75rem;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   ENHANCED RIPPLE EFFECT FOR SYLLABUS BUTTONS
+   ═══════════════════════════════════════════════════════════════════ */
+
+.sup-golden-ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.6) 0%, transparent 70%);
+  transform: scale(0);
+  animation: ripple-effect 0.8s ease-out;
+  pointer-events: none;
+  width: 100px;
+  height: 100px;
+  top: 50%;
+  left: 50%;
+  transform-origin: center;
+  margin-top: -50px;
+  margin-left: -50px;
+}
+
+@keyframes ripple-effect {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(4);
+    opacity: 0;
+  }
+}

@@ -10,11 +10,12 @@ export default function SubjectUnitPage() {
   const { branch, yearId, semId } = useParams();
   const navigate = useNavigate();
 
-  // strip the optional text prefix (“year”, “sem”)
+  // strip the optional text prefix ("year", "sem")
   const clean = (val, prefix) => val?.replace(new RegExp(`^${prefix}`, "i"), "");
   
   const year = clean(decodeURIComponent(yearId), "year");
   const sem = clean(decodeURIComponent(semId), "sem");
+
   // ────────────────────────────────
   // 2. env-driven API base
   // ────────────────────────────────
@@ -29,6 +30,7 @@ export default function SubjectUnitPage() {
   const [animateUnits,    setAnimateUnits]    = useState(false);
   const [loading,         setLoading]         = useState(true);
   const [error,           setError]           = useState(null);
+  const [semesterSyllabus, setSemesterSyllabus] = useState(null);
 
   // ────────────────────────────────
   // 4. fetch on route change
@@ -37,6 +39,7 @@ export default function SubjectUnitPage() {
     setLoading(true);
     setError(null);
 
+    // Fetch subjects data
     fetch(`${API_BASE}/api/syllabus/${branch}/${year}/${sem}`)
       .then((res) => {
         if (!res.ok) throw new Error("Data not found");
@@ -48,6 +51,20 @@ export default function SubjectUnitPage() {
       })
       .catch((err) => setError(err.message))
       .finally(() => setLoading(false));
+
+    // Fetch semester syllabus
+    fetch(`${API_BASE}/api/semester-syllabus/${branch}/${year}/${sem}`)
+      .then((res) => {
+        if (res.ok) return res.json();
+        return null;
+      })
+      .then((syllabusData) => {
+        setSemesterSyllabus(syllabusData);
+      })
+      .catch(() => {
+        // Silently handle error - semester syllabus is optional
+        setSemesterSyllabus(null);
+      });
   }, [API_BASE, branch, year, sem]);
 
   // ────────────────────────────────
@@ -85,6 +102,20 @@ export default function SubjectUnitPage() {
     if (e?.currentTarget) createGoldenRipple(e.currentTarget);
   };
 
+  const handleSemesterSyllabusClick = (e) => {
+    if (semesterSyllabus?.pdfPath) {
+      openPdf(semesterSyllabus.pdfPath);
+      if (e?.currentTarget) createGoldenRipple(e.currentTarget);
+    }
+  };
+
+  const handleSubjectSyllabusClick = (e) => {
+    if (selectedSubject?.syllabusPdf) {
+      openPdf(selectedSubject.syllabusPdf);
+      if (e?.currentTarget) createGoldenRipple(e.currentTarget);
+    }
+  };
+
   // ────────────────────────────────
   // 7. render
   // ────────────────────────────────
@@ -102,6 +133,24 @@ export default function SubjectUnitPage() {
               </div>
             </div>
           </div>
+
+          {/* Semester Syllabus Button */}
+          {semesterSyllabus && (
+            <div className="sup-semester-syllabus-section">
+              <button
+                className="sup-semester-syllabus-btn"
+                onClick={handleSemesterSyllabusClick}
+                title="View Complete Semester Syllabus"
+              >
+                <div className="sup-syllabus-icon">📋</div>
+                <div className="sup-syllabus-text">
+                  <span className="sup-syllabus-title">Semester Syllabus</span>
+                  <span className="sup-syllabus-subtitle">Complete curriculum</span>
+                </div>
+                <div className="sup-syllabus-arrow">→</div>
+              </button>
+            </div>
+          )}
 
           <div className="sup-subjects-scroll">
             {loading ? (
@@ -145,7 +194,20 @@ export default function SubjectUnitPage() {
           ) : (
             <div className="sup-units-content">
               <div className="sup-subject-header">
-                <h3 className="sup-current-subject">{selectedSubject.name}</h3>
+                <div className="sup-subject-title-row">
+                  <h3 className="sup-current-subject">{selectedSubject.name}</h3>
+                  {/* Subject-specific Syllabus Button */}
+                  {selectedSubject.syllabusPdf && (
+                    <button
+                      className="sup-subject-syllabus-btn"
+                      onClick={handleSubjectSyllabusClick}
+                      title={`View ${selectedSubject.name} Syllabus`}
+                    >
+                      <span className="sup-subject-syllabus-icon">📄</span>
+                      <span className="sup-subject-syllabus-text">Syllabus</span>
+                    </button>
+                  )}
+                </div>
                 <div className="sup-subject-decoration" />
               </div>
 
